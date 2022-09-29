@@ -1,5 +1,10 @@
 package Daily_Assignment;
 
+//WAP to accept a no from user and check it is prime or not.
+Pass this number in different function and check it is even or odd. 
+IF number is even than check it is divisible by 10 or not in different function
+and is no is odd than check it is divisible by 3 or not in different function//
+
 import java.util.Scanner;
 
 public class LabAssgn3_29
