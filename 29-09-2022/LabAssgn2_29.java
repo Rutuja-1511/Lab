@@ -1,5 +1,7 @@
 package Daily_Assignment;
 
+//Write a program to calculate HCF of Two given number.
+	
 import java.util.Scanner;
 
 public class LabAssgn2_29 
