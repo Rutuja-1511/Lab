@@ -1,5 +1,7 @@
 package Daily_Assignment;
 
+//Write a program to accept a number from user and then prints the sum of the even and odd integers.
+
 import java.util.Scanner;
 
 public class LabAssgn_29 
