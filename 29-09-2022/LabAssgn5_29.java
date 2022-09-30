@@ -1,5 +1,7 @@
 package Daily_Assignment;
 
+//WAP to accept no from user in array and find out average and sum of array numbers.
+
 import java.util.Scanner;
 
 public class LabAssgn5_29 {
