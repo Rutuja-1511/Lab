@@ -1,5 +1,7 @@
 package Daily_Assignment;
 
+//WAP to display prime no between 1 to 150 in two dimension array 
+
 public class LabAssgn6_29 {
 
 
