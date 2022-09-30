@@ -1,5 +1,8 @@
 package Daily_Assignment;
 
+// WAP to accept size from user accordingly accept numbers from user and also accept
+//the no from user which you want to delete from your array and display the output.
+
 import java.util.Scanner;
 
 public class LabAssgn4_29 
