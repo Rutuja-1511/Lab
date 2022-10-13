@@ -1,0 +1,43 @@
+//WAP to create a class which contain the method Palindrom .the second class will 
+use the proerty of first class and display the output//
+
+package Inheritance;
+
+import java.util.Scanner;
+
+public class Palindrom {
+
+
+		public static void process() 
+		{
+			int x, y, sum = 0, temp;
+			Scanner sc = new Scanner(System.in);
+			System.out.print("Enter your number: ");
+			x = sc.nextInt();
+			temp = x;
+			while (x > 0) 
+			{
+				y = x % 10;
+				sum = (sum * 10) + y;
+				x = x / 10;
+			}
+			if (temp == sum) 
+				System.out.println("Number is a Palindrome");
+			else
+				System.out.println("Number is not a Palindrome");
+		}
+
+	}
+
+
+package Inheritance;
+
+	public class palindrome extends Palindrom {
+		
+		public static void main(String[] args) 
+		{
+			// TODO Auto-generated method stub
+			process();  
+		}
+
+	}
