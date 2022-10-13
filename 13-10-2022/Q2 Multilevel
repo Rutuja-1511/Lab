@@ -1,0 +1,64 @@
+//WAP to create a class Reverse No, second class SOD , Third class use both the class property and display the output//
+
+package Inheritance;
+
+import java.util.Scanner;
+
+public class reverse {
+	
+	
+	public static void Reverse() {
+		int num,rev=0;
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.print("Enter your number: "); 
+		
+		num=sc.nextInt();
+		rev=0;
+		while(num!=0)
+		{
+			rev=rev*10+num%10;
+			num=num/10;
+		}
+		System.out.println("Reverse Number is:"+rev);
+	}
+}
+
+
+package Inheritance;
+
+import java.util.Scanner;
+
+public class sumofdigit extends reverse
+{
+	
+   public static void Sod()  
+{  
+   int num, digit, sum = 0;  
+   Scanner sc = new Scanner(System.in); 
+   
+   System.out.print("Enter the number: ");  
+   num = sc.nextInt();  
+while(num > 0)  
+{  
+    digit = num % 10;  
+    sum = sum + digit;  
+    num = num / 10;  
+}  
+  
+System.out.println("Sum of Digits: "+sum);  
+}  
+}  
+
+
+package Inheritance;
+
+public class multilevel extends sumofdigit{
+
+	public static void main(String[]args) {
+		
+		Reverse();
+		Sod();
+	}
+
+}
