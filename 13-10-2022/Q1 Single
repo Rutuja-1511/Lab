@@ -10,10 +10,10 @@ public class Palindrom {
 
 		public static void process() 
 		{
-			int x, y, sum = 0, temp;
+			int x, y, sum = 0, temp;                                   //initialize variables
 			Scanner sc = new Scanner(System.in);
 			System.out.print("Enter your number: ");
-			x = sc.nextInt();
+			x = sc.nextInt();          //input from user
 			temp = x;
 			while (x > 0) 
 			{
@@ -21,8 +21,8 @@ public class Palindrom {
 				sum = (sum * 10) + y;
 				x = x / 10;
 			}
-			if (temp == sum) 
-				System.out.println("Number is a Palindrome");
+			if (temp == sum)                                              // condition to check
+				System.out.println("Number is a Palindrome");          //print stattement
 			else
 				System.out.println("Number is not a Palindrome");
 		}
@@ -37,7 +37,7 @@ package Inheritance;
 		public static void main(String[] args) 
 		{
 			// TODO Auto-generated method stub
-			process();  
+			process();                                                         // calling palindrome in class 
 		}
 
 	}
