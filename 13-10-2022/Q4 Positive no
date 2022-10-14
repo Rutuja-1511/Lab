@@ -9,18 +9,18 @@ public class sumofpositiveno {
 public static void main(String[] args) {
 	Scanner sc=new Scanner(System.in);
 	
-	int sum=0;
+	int sum=0;                                           // initialize variable
 	System.out.println("Enter the Size of Array :");
 	
-	int size=sc.nextInt();
+	int size=sc.nextInt();                               // accepting array size
 	int array[] =new int[size];
 	System.out.println("Enter the Elements of Array :");
 	
 	for(int i=0;i<=size-1;i++)
 	{
-	 array[i]=sc.nextInt();
-	 sum += array[i];
+	 array[i]=sc.nextInt();                           // getting valuse from user
+	 sum += array[i];                                  // used formula
 	}
-	System.out.println("The sum of all positive no is :"+sum );
+	System.out.println("The sum of all positive no is :"+sum );      // print statment
 }
 }
