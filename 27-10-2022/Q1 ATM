@@ -1,0 +1,138 @@
+//WAP to craete  ATM  where customer enter our details ,pin and withdrawal cash or deposit cash.
+In this program you have to use encapculation for hinding user details and inheritance,polymorphism and interface.//
+
+package Thrusdaylab;
+
+public interface atm {
+
+	public void pro();
+}
+
+
+package Thrusdaylab;
+
+public class PersInfo {   
+	
+	private int pass;
+	private int ac_bal = 1000;
+                                                // used get set method
+	public int getPassword() {
+		return pass;
+	}
+
+	public void setPassword(int u_pass) {
+		this.pass = u_pass;
+	}
+
+	public void setAc_balance(int bal) {
+		this.ac_bal = bal;
+	}
+
+	public int getAc_balance() {
+		return ac_bal;
+	}
+
+	public int getAc_balancecredit() {
+		return ac_bal;
+	}
+
+	public void setAc_balancecredit(int crebit) {       //deposit cash
+		this.ac_bal += crebit;
+		                                            
+	}
+
+	public int getAc_balancedebit() {
+		return ac_bal;
+	}
+
+	public void setAc_balancedebit(int dedit) {       //withdrawal cash
+		this.ac_bal -= dedit;
+	}
+}
+
+
+
+package Thrusdaylab;
+
+import java.util.Scanner;
+
+public class BankATM extends PersInfo implements atm {               //extended clss
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		BankATM b = new BankATM();
+		b.accept();
+	}
+
+	void accept() {
+		int user_pin;
+		char card;
+		System.out.println("Please Insert card and enter 'y' or 'yes'");
+		
+		card = sc.next().charAt(0);
+		if (card == 'Y' || card == 'y') 
+		{
+			System.out.println("Enter your Pin: ");                             //print
+			user_pin = sc.nextInt();
+			PersInfo obj = new PersInfo();
+			obj.setPassword(user_pin);
+			pro();
+		}
+	}
+
+	
+	public void pro()
+	// TODO Auto-generated method stub
+	{
+
+		int user_bal = 0;
+		PersInfo obj = new PersInfo();
+		int choice;
+		char ans;
+		do {
+			System.out.println("Choose the Option\n1.Deposit \n2.Withdraw ");              //printing choice statment
+			choice = sc.nextInt();
+			switch (choice)
+			{
+			case 1:
+				System.out.println("Enter the Amount you want to Deposit:  ");          //For deposit
+				user_bal = sc.nextInt();
+				obj.setAc_balancecredit(user_bal);
+				
+				System.out.println("Deposited amount is Rs." + user_bal);
+				System.out.println("The new account balance is Rs. " + obj.getAc_balancecredit());
+
+				break;
+				
+			case 2:
+				System.out.println("Enter the amount you want to Withdraw: ");         //For withdraw
+				user_bal = sc.nextInt();
+				obj.setAc_balancedebit(user_bal);
+				
+				if (obj.getAc_balancedebit() >= 0)                                                        // if else loop
+				{
+					System.out.println("Current account balance is Rs. " + obj.getAc_balancedebit());
+				} 
+				else 
+				{
+					System.out.println("Account does not have sufficient amount to withdraw");
+				}
+
+				break;
+				
+			default:
+				System.out.println("Invalid choice");
+
+			}
+			System.out.println("Do you want to do any another transactions y/n");
+			ans = sc.next().charAt(0);
+
+		} 
+		while (ans == 'Y' || ans == 'y');                                                     //while loop
+
+		System.out.println("The acccount balance =" + obj.getAc_balance());
+		System.out.println("Thank you !!!");
+
+	}
+
+}
